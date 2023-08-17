@@ -1,0 +1,104 @@
+.admission {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.904);
+    flex-direction: column;
+    padding: 30px 0px;
+    row-gap: 30px;
+
+    .admission-container {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        .header {
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+        }
+
+        .all-application {
+            .application {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 30px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.256);
+                row-gap: 10px;
+                border-top: 3px solid var(--blue-color);
+
+                .image-wrapper {
+                    width: 70px;
+                    height: 70px;
+                }
+                p {
+                    text-align: center;
+                }
+            }
+            .green {
+                border-top: 3px solid green;
+            }
+            .yellow {
+                border-top: 3px solid yellow;
+            }
+        }
+    }
+
+    .program {
+        background-color: var(--purple-color);
+        display: flex;
+        flex-direction: column;
+        padding: 30px 30px;
+
+        .heading{
+            color: white;
+        }
+
+        .admission-fees {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            row-gap: 40px;
+            border-radius: 5px;
+            border-top: 3px solid #FF7601;
+            padding: 30px 0px;
+            .item {
+                padding-inline: 20px;
+                display: flex;
+                flex-direction: column;
+                row-gap: 20px;
+                // justify-contenat: center;
+                align-items: center;
+                // border-bottom: 2px solid rgb(112, 112, 112);
+
+                .price {
+                    font-size: 30px;
+                    font-weight: 700;
+                }
+
+                .btn {
+                    border: none;
+                    color: white;
+                    background-color: #ff7601;
+                    font-size: 17px;
+                    font-weight: 550;
+                    border-radius: 2px;
+                    padding: 8px 20px;
+                }
+
+                .image-wrapper{
+                    width: 400px;
+                }
+
+                p {
+                    text-align: center;
+                }
+
+                .orange{
+                    color: #ff7601;
+                }
+            }
+        }
+    }
+}

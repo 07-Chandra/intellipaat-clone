@@ -1,5 +1,12 @@
+import Admission from "./Components/Admission/Admission";
+import Course from "./Components/Course/Course";
+import Curriculum from "./Components/Curriculum/Curriculum";
 import Hero from "./Components/Hero/Hero";
+import Mentors from "./Components/Mentors/Mentors";
 import Program from "./Components/Program/Program";
+import Project from "./Components/Project/Project";
+import Reviews from "./Components/Reviews/Reviews";
+import Services from "./Components/Services/Services";
 import Transition from "./Components/Transition/Transition";
 
 
@@ -8,7 +15,16 @@ export default function Home() {
     <main>
      {/* <Hero/> */}
      {/* <Program/> */}
-     <Transition/>
+     {/* <Transition/> */}
+      {/* <Course/> */}
+      {/* <Mentors/> */}
+      {/* <Curriculum/> */}
+      {/* <Project/> */}
+      {/* <Reviews/> */}
+      {/* <Services/> */}
+      <Admission/>
+
+    
     </main>
   )
 }

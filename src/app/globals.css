@@ -6,7 +6,14 @@
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
   --main-color : #f3f3f3;
+  --purple-color : #6659B8;
+  --blue-color : #1289EE;
+  --orange-color : #FF7601;
 
+}
+
+span{
+  font-weight: 600;
 }
 
 * {
@@ -30,10 +37,21 @@ img{
   font-weight: 550;
 }
 
+.subheading{
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.heading{
+  font-size: 24px;
+  font-weight: normal;
+  /* font-weight: 600; */
+}
+
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background-color: white;
+  background-color: #f3f3f3;
 }
 

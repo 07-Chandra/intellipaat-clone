@@ -1,0 +1,122 @@
+.course {
+    display: flex;
+    justify-content: center;
+
+    .course-container {
+        padding: 30px 10px;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+
+        background-color: var(--main-color);
+
+        .header {
+            .heading {
+                font-size: 24px;
+                margin-block: 20px;
+            }
+        }
+        .features {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            row-gap: 10px;
+            border-radius: 5px;
+
+            .item {
+                display: flex;
+                column-gap: 10px;
+
+                .icon-div {
+                    .icon {
+                        font-size: 20px;
+                        color: green;
+                    }
+                }
+                p {
+                    line-height: 23px;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .architect {
+            display: flex;
+            flex-direction: column;
+            row-gap: 50px;
+
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+
+            .card {
+                display: flex;
+                flex-direction: column;
+                row-gap: 10px;
+                border-radius: 5px;
+                border-left: 4px solid var(--purple-color);
+                padding: 10px;
+                h3 {
+                    font-weight: 550;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .skill-div {
+            margin-block: 15px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+
+            .subheading {
+                text-align: center;
+            }
+            .skill {
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                row-gap: 20px;
+                .item {
+                    background-color: white;
+                    padding: 15px 60px;
+                    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.292);
+                    border-left: 4px solid var(--purple-color);
+
+                    span {
+                        font-size: 14px;
+                    }
+                }
+                .view {
+                    color: rgb(20, 113, 218);
+                    text-align: center;
+                    font-weight: 550;
+                }
+            }
+        }
+
+        .tools-div {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            .subheading {
+                text-align: center;
+            }
+            .tool {
+                display: flex;
+                column-gap: 15px;
+                .image-wrapper {
+                    width: 150px;
+                }
+            }
+
+            .view {
+                    color: rgb(20, 113, 218);
+                    text-align: center;
+                    font-weight: 550;
+                }
+        }
+    }
+}
