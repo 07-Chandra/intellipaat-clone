@@ -1,10 +1,16 @@
 import React from "react";
 import "./Hero.scss";
+import Contact from "@/app/SubComponents/Contact/Contact";
+import { AiOutlineDown } from "react-icons/ai";
 
 function Hero() {
     return (
         <div className="hero">
             <div className="cover">
+
+                <div className="contact">
+                    <Contact/>
+                </div>
                 <div className="course">
                     <h1 className="heading">
                         Advanced Certification in DevOps & Cloud Computing
@@ -91,7 +97,11 @@ function Hero() {
 
                 <div className="success">
                     <div className="top">
-                        <p> <b>95%</b> learners satisfaction score post completion of the program* </p>
+                        <p>
+                            {" "}
+                            <b>95%</b> learners satisfaction score post
+                            completion of the program*{" "}
+                        </p>
                     </div>
                     <div className="bottom">
                         <div className="image-wrapper">
@@ -103,6 +113,7 @@ function Hero() {
                     </div>
                 </div>
             </div>
+           
         </div>
     );
 }

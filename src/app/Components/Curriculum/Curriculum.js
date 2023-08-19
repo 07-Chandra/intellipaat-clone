@@ -19,6 +19,10 @@ function Curriculum() {
                         <BsFillCircleFill className="green" />
                         <p className="para">Self Paced</p>
                     </div>
+
+                    <div className="download-btn">
+                        <button className="btn">Download Brochure</button>
+                    </div>
                 </div>
 
                 <div className="module">
@@ -91,7 +95,7 @@ function Curriculum() {
                 <div className="heading">
                     <span>Elective</span>
                 </div>
-                <div className="module">
+                <div className="module card">
                     <div className="item">
                         <div className="icon-part">
                             <BsFillCircleFill className="icon" />
@@ -142,6 +146,17 @@ function Curriculum() {
                             <AiOutlineDown className="arrow" />
                         </div>
                     </div>
+                </div>
+
+                <div className="desclaimer">
+                    <h3>Desclaimer</h3>
+                    <p className="desc">
+                        {" "}
+                        Intellipaat reserves the right to modify, amend or
+                        change the structure of module &amp; the curriculum,
+                        after due consensus with the university/certification
+                        partner.
+                    </p>
                 </div>
             </div>
         </div>

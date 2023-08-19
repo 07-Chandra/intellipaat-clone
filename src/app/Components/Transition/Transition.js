@@ -45,27 +45,32 @@ function Transition() {
                     </p>
 
                     <div className="company">
-                        <div className="image-wrapper">
-                            <img
-                                src="https://intellipaat.com/course-image/2021/08/IBM.jpg"
-                                alt=""
-                            />
+                        <div className="position">
+                            <div className="image-wrapper">
+                                <img
+                                    src="https://intellipaat.com/course-image/2021/08/IBM.jpg"
+                                    alt=""
+                                />
+                            </div>
+                            <p className="para">System Engineer</p>
                         </div>
-                        <p className="bold">System Engineer</p>
+
                         <picture class="icon"></picture>
-                        <div className="image-wrapper">
-                            <img
-                                src="https://intellipaat.com/course-image/2021/08/IBM.jpg"
-                                alt=""
-                            />
+                        <div className="position">
+                            <div className="image-wrapper">
+                                <img
+                                    src="https://intellipaat.com/course-image/2021/08/IBM.jpg"
+                                    alt=""
+                                />
+                            </div>
+                            <p className="para">DevOps Engineer</p>
                         </div>
-                        <p className="bold">DevOps Engineer</p>
                     </div>
                 </div>
             </div>
 
             <div className="graph">
-                <div className="status">
+                <div className="status a">
                     <FaArrowTrendUp className="icon" />
 
                     <p>
@@ -88,7 +93,7 @@ function Transition() {
                     </p>
                 </div>
                 <div
-                    className="status"
+                    className="status a"
                     style={{ borderTop: "4px solid orange" }}
                 >
                     <BsPersonPlusFill
@@ -112,9 +117,8 @@ function Transition() {
                         <span>300+</span> Hiring Partners
                     </p>
                 </div>
-
-                <a class="link">Career Transition Handbook</a>
             </div>
+            <a class="link">Career Transition Handbook</a>
         </div>
     );
 }

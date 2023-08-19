@@ -1,4 +1,5 @@
 import Admission from "./Components/Admission/Admission";
+import Cohort from "./Components/Cohort/Cohort";
 import Course from "./Components/Course/Course";
 import Curriculum from "./Components/Curriculum/Curriculum";
 import Hero from "./Components/Hero/Hero";
@@ -8,6 +9,7 @@ import Project from "./Components/Project/Project";
 import Reviews from "./Components/Reviews/Reviews";
 import Services from "./Components/Services/Services";
 import Transition from "./Components/Transition/Transition";
+import Contact from "./SubComponents/Contact/Contact";
 
 
 export default function Home() {
@@ -21,8 +23,10 @@ export default function Home() {
       {/* <Curriculum/> */}
       {/* <Project/> */}
       {/* <Reviews/> */}
-      {/* <Services/> */}
-      <Admission/>
+      <Services/>
+      {/* <Admission/> */}
+      {/* <Cohort/> */}
+      {/* <Contact/> */}
 
     
     </main>

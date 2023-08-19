@@ -3,7 +3,8 @@
     justify-content: center;
     padding: 30px 0px;
     .curiculum-container {
-        width: 85%;
+        // background-color: rgb(247, 247, 247);
+        width: 90%;
         display: flex;
         flex-direction: column;
         row-gap: 20px;
@@ -23,17 +24,27 @@
                     color: green;
                 }
             }
+
+            .download-btn {
+                display: none;
+            }
         }
 
         .module {
+            // box-sizing: 0px 4px 16px rgb( 0 0 0/8%);
+
+            padding: 15px;
             .item {
                 display: flex;
                 // justify-content: center;
-                margin-block: 10px;
+                // margin-block: 10px;
+                border-bottom: 2px solid rgb(169, 169, 169);
+
                 align-items: center;
                 column-gap: 20px;
-                padding: 10px 15px;
+                padding: 14px 18px;
                 background-color: white;
+                box-shadow: 0 2px 16px rgb(0 0 0/8%);
 
                 .icon-part {
                     .icon {
@@ -42,7 +53,7 @@
                     }
 
                     .arrow {
-                        font-size: 30px;
+                        font-size: 20px;
                         font-weight: 900;
                         //    padding-left: 10px;
 
@@ -51,6 +62,38 @@
                 }
                 .para {
                     flex-grow: 10;
+                }
+            }
+        }
+
+        .desclaimer {
+            display: flex;
+            flex-direction: column;
+            padding: 15px 10px;
+            row-gap: 20px;
+            border: 1px dashed var(--orange-color);
+            box-shadow: 0px 4px 8px rgb(0 0 0/8%);
+            h3 {
+                font-size: 16px;
+                font-weight: 600;
+            }
+            .desc {
+                font-size: 14px;
+                color: rgb(34, 34, 34);
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .curriculum {
+        .curiculum-container {
+            // background-color: rgb(247, 247, 247);
+            width: 80%;
+
+            .header {
+                .download-btn {
+                    display: block;
                 }
             }
         }

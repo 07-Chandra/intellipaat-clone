@@ -1,133 +1,315 @@
 .program {
     display: flex;
     flex-direction: column;
-    row-gap: 30px;
-    padding: 30px 20px;
+    align-items: center;
     background-color: var(--main-color);
-    .header {
+
+    padding: 30px 10px;
+
+    .program-container {
+        width: 85%;
         display: flex;
         flex-direction: column;
-        row-gap: 20px;
-        h2 {
-            font-size: 24px;
-            font-weight: normal;
-
-            span {
-                font-weight: 600;
-            }
-        }
-        p {
-            font-size: 14px;
-        }
-    }
-
-    .highlight {
-        display: flex;
-        flex-direction: column;
-        padding: 30px 15px;
-        background-color: white;
-        row-gap: 20px;
-        align-items: start;
-        border-radius: 10px;
-        border-top: 3px solid rgb(15, 99, 244);
+        row-gap: 30px;
 
         .header {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
             h2 {
-                font-weight: 550;
-                font-size: 22px;
-            }
-        }
+                font-size: 24px;
+                font-weight: normal;
 
-        .points {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            row-gap: 15px;
-            .item {
-                width: 100%;
-                display: flex;
-                column-gap: 15px;
-
-                .icon {
-                    font-size: 21px;
-                    color: rgb(15, 99, 244);
-                }
-
-                p {
-                    font-weight: 550;
-                    font-size: 14px;
-                }
-            }
-        }
-    }
-
-    .about {
-        display: flex;
-        flex-direction: column;
-        row-gap: 20px;
-        // justify-content: center;
-        padding: 30px 0px;
-        .header {
-            display: flex;
-            flex-direction: column;
-            .heading {
-                font-size: 22px;
                 span {
                     font-weight: 600;
-                    margin-block: 15px;
                 }
+            }
+            p {
+                font-size: 14px;
             }
         }
 
-        .achivement {
-            // padding: 15px;
-            width: 100%;
+        .highlight {
+            display: flex;
+            flex-direction: column;
+            padding: 30px 15px;
             background-color: white;
-            padding: 20px;
+            row-gap: 20px;
+            align-items: start;
             border-radius: 10px;
-            border-top: 2px solid orange;
+            border-top: 3px solid rgb(15, 99, 244);
 
-            .subhead {
-                font-size: 20px;
-                font-weight: 600;
-                margin-block: 15px;
+            .header {
+                h2 {
+                    font-weight: 550;
+                    font-size: 22px;
+                }
             }
 
-            .list {
-                margin-inline: 30px;
+            .points {
+                width: 100%;
                 display: flex;
                 flex-direction: column;
                 row-gap: 15px;
-                align-items: center;
-                li {
-                    font-size: 14px;
+                .item {
+                    width: 100%;
+                    display: flex;
+                    column-gap: 15px;
 
-                    &::marker {
-                        font-size: 30px;
-                        color: #1289ee;
+                    .item-icon {
+                        .icon {
+                            font-size: 21px;
+                            color: rgb(15, 99, 244);
+                        }
+                    }
+
+                    p {
+                        font-weight: 550;
+                        font-size: 14px;
                     }
                 }
             }
         }
-        .certificate {
+
+        .about {
             display: flex;
-            align-items: center;
             flex-direction: column;
-            row-gap: 15px;
-            .image-wrapper {
-                width: 300px;
-              
+            row-gap: 60px;
+            // justify-content: center;
+            padding: 30px 0px;
+            .header {
+                display: flex;
+                flex-direction: column;
+                .heading {
+                    font-size: 22px;
+                    span {
+                        font-weight: 600;
+                        margin-block: 15px;
+                    }
+                }
             }
 
-            .zoom {
-                text-align: center;
-                font-weight: 600;
-                color: #1289ee;
+            .achivement {
+                // padding: 15px;
+                width: 100%;
+                background-color: white;
+                padding: 20px;
+                border-radius: 10px;
+                border-top: 2px solid orange;
+
+                .subhead {
+                    font-size: 20px;
+                    font-weight: 600;
+                    margin-block: 15px;
+                }
+
+                .list {
+                    margin-inline: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 15px;
+                    align-items: center;
+                    li {
+                        font-size: 14px;
+
+                        &::marker {
+                            font-size: 30px;
+                            color: #1289ee;
+                        }
+                    }
+                }
+            }
+            .certificate {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                row-gap: 15px;
+                .image-wrapper {
+                    width: 330px;
+                }
+
+                .zoom {
+                    text-align: center;
+                    font-weight: 600;
+                    color: #1289ee;
+                }
+
+                .note {
+                    width: 95%;
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .program {
+        .program-container {
+            row-gap: 30px;
+
+            background-color: var(--main-color);
+
+            .header {
+                row-gap: 30px;
+                h2 {
+                    font-size: 30px;
+                }
+                p {
+                    font-size: 15px;
+                }
             }
 
-            .note {
-                width: 95%;
-                font-style: italic;
+            .highlight {
+                padding: 30px 15px;
+                background-color: white;
+                row-gap: 20px;
+                align-items: start;
+                border-radius: 10px;
+                border-top: 3px solid rgb(15, 99, 244);
+
+                .header {
+                    h2 {
+                        font-size: 19px;
+                    }
+                }
+
+                .points {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+
+                    gap: 15px;
+                    row-gap: 17px;
+                    .item {
+                        .item-icon {
+                            .icon {
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .about {
+                .header {
+                    .heading {
+                        font-size: 30px;
+                    }
+
+                    .para {
+                        font-weight: normal;
+                    }
+                }
+
+                .achivement {
+                    // padding: 15px;
+
+                    .subhead {
+                        font-size: 20px;
+                        font-weight: 600;
+                        margin-block: 15px;
+                    }
+
+                    .list {
+                        margin-inline: 30px;
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 15px;
+                        align-items: start;
+                        li {
+                            font-size: 14px;
+
+                            &::marker {
+                                font-size: 30px;
+                                color: #1289ee;
+                            }
+                        }
+                    }
+                }
+                .certificate {
+                    .image-wrapper {
+                        width: 650px;
+                    }
+
+                    .zoom {
+                    }
+
+                    .note {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .program {
+        .program-container {
+            row-gap: 30px;
+
+            background-color: var(--main-color);
+
+            .header {
+                row-gap: 30px;
+                h2 {
+                    font-size: 30px;
+                }
+                p {
+                    font-size: 15px;
+                }
+            }
+
+            .highlight {
+                .header {
+                    h2 {
+                        font-size: 19px;
+                    }
+                }
+
+                .points {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+
+                    gap: 15px;
+                    row-gap: 17px;
+                    .item {
+                        .item-icon {
+                            .icon {
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .about {
+                display: grid;
+                grid-template-columns: 65% 35%;
+                gap: 20px;
+
+                .header {
+                    .heading {
+                        font-size: 30px;
+                    }
+
+                    .para {
+                        font-weight: normal;
+                    }
+                }
+
+                .achivement {
+                    // padding: 15px;
+
+                    order: 2;
+                    margin-top: -100px;
+                }
+                .certificate {
+                    order: 1;
+                    .image-wrapper {
+                        width: 350px;
+                    }
+                }
             }
         }
     }
