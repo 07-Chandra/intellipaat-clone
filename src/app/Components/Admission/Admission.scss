@@ -50,7 +50,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 30px 30px;
+        // padding: 30px 30px;
 
         .cover {
             width: 90%;
@@ -59,7 +59,6 @@
             // align-items: center;
             // padding: 30px 30px;
             row-gap: 20px;
-
 
             .heading {
                 color: white;
@@ -82,9 +81,41 @@
                     align-items: center;
                     // border-bottom: 2px solid rgb(112, 112, 112);
 
-                    .price {
-                        font-size: 30px;
-                        font-weight: 700;
+                    .left-part {
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 20px;
+                        .price {
+                            font-size: 30px;
+                            font-weight: 700;
+                        }
+                    }
+
+                    .right-part {
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 20px;
+                        align-items: center;
+                        .image-wrapper {
+                            width: 400px;
+                        }
+
+                        .orange {
+                            color: #ff7601;
+                        }
+                    }
+                    .left {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        row-gap: 10px;
+                        .price {
+                            font-size: 30px;
+                            font-weight: 700;
+                        }
+                        .orange {
+                            color: #ff7601;
+                        }
                     }
 
                     .btn {
@@ -97,16 +128,174 @@
                         padding: 8px 20px;
                     }
 
-                    .image-wrapper {
-                        width: 400px;
-                    }
-
                     p {
                         text-align: center;
                     }
+                }
+                .bottom-para {
+                    text-align: center;
+                    // align-items: center;
+                    width: 80%;
+                    margin-top: -40px;
+                    margin-left: 50px;
+                }
+            }
+        }
+    }
+}
 
-                    .orange {
-                        color: #ff7601;
+@media only screen and (min-width: 768px) {
+    .admission {
+        .admission-container {
+            width: 85%;
+
+            align-items: center;
+
+            padding: 40px 0px;
+
+            .all-application {
+                display: flex;
+                flex-direction: column;
+                width: 90%;
+                align-items: center;
+                .application {
+                    width: 100%;
+                    padding: 35px;
+                }
+            }
+        }
+
+        .program {
+            background-color: var(--purple-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 30px;
+
+            .cover {
+                width: 85%;
+
+                row-gap: 25px;
+
+                .admission-fees {
+                    .item {
+                        .left {
+                        }
+                    }
+
+                    .bottom-para {
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .admission {
+        .admission-container {
+            width: 80%;
+
+            align-items: center;
+
+            padding: 40px 0px;
+
+            .all-application {
+                display: flex;
+                flex-direction: row;
+                width: 90%;
+                column-gap: 15px;
+                height: 100%;
+                .application {
+                    height: 100%;
+                    width: 100%;
+                    padding: 35px;
+                    // border-right: 1px solid rgb(125, 125, 125);
+                }
+            }
+        }
+
+        .program {
+            width: 100%;
+            background-color: var(--purple-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 30px;
+
+            .cover {
+                width: 80%;
+
+                row-gap: 25px;
+
+                .admission-fees {
+                    .item {
+                        padding-inline: 40px;
+
+                        flex-direction: row;
+
+                        justify-content: space-between;
+                        align-items: left;
+                        // border-bottom: 2px solid rgb(112, 112, 112);
+
+                        .left-part {
+                            flex: 1;
+                            display: flex;
+                            flex-direction: column;
+                            align-self: flex-start;
+                            justify-self: start;
+                            text-align: left;
+                            row-gap: 20px;
+                            .price {
+                                text-align: left;
+                                font-size: 30px;
+                                font-weight: 700;
+                            }
+                        }
+
+                        .right-part {
+                            flex: 3;
+                            display: flex;
+                            flex-direction: column;
+                            row-gap: 20px;
+                            align-items: center;
+                            .image-wrapper {
+                                width: 400px;
+                            }
+                        }
+                        .left {
+                            width: 100%;
+                            display: flex;
+                            column-gap: 20px;
+                            align-items: center;
+                            .orange {
+                                color: #ff7601;
+                            }
+                            .price {
+                                text-align: left;
+                                font-size: 30px;
+                                font-weight: 700;
+                            }
+                            // justify-content: space-between;
+                        }
+
+                        .btn {
+                            border: none;
+                            color: white;
+                            background-color: #ff7601;
+                            font-size: 17px;
+                            font-weight: 550;
+                            border-radius: 2px;
+                            padding: 8px 20px;
+                        }
+
+                        p {
+                            text-align: center;
+                        }
+                    }
+                    .bottom-para {
+                        margin-left: 40px;
+                        margin-top: -40px;
                     }
                 }
             }

@@ -15,19 +15,18 @@ import Contact from "./SubComponents/Contact/Contact";
 export default function Home() {
   return (
     <main>
-     {/* <Hero/> */}
-     {/* <Program/> */}
-     {/* <Transition/> */}
-      {/* <Course/> */}
-      {/* <Mentors/> */}
-      {/* <Curriculum/> */}
-      {/* <Project/> */}
-      {/* <Reviews/> */}
+     <Hero/>
+     <Program/>
+     <Transition/>
+      <Course/>
+      <Mentors/>
+      <Curriculum/>
+      <Project/>
+      <Reviews/>
       <Services/>
-      {/* <Admission/> */}
-      {/* <Cohort/> */}
-      {/* <Contact/> */}
-
+      <Admission/>
+      <Cohort/>
+      
     
     </main>
   )

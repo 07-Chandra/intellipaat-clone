@@ -7,11 +7,10 @@ function Hero() {
     return (
         <div className="hero">
             <div className="cover">
-
-                <div className="contact">
-                    <Contact/>
+                <div className="contact-form">
+                    <Contact />
                 </div>
-                <div className="course">
+                <div className="hero-course">
                     <h1 className="heading">
                         Advanced Certification in DevOps & Cloud Computing
                     </h1>
@@ -113,7 +112,6 @@ function Hero() {
                     </div>
                 </div>
             </div>
-           
         </div>
     );
 }

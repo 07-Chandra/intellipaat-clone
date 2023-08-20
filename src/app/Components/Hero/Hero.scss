@@ -14,7 +14,7 @@
     .cover {
         padding-bottom: 250px;
 
-        .course {
+        .hero-course {
             padding: 30px;
             max-width: 550px;
             display: flex;
@@ -145,10 +145,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-block: 30px;
 
             width: 85%;
-            background-color: white;
-            row-gap: 20px;
+
+            // padding: 30px;
             border: 1px solid coral;
             border-radius: 10px;
 
@@ -158,6 +159,7 @@
                 #ffe3cf 79.13%
             );
             .top {
+                flex: 1;
                 width: 100%;
                 height: 100%;
                 border-radius: 9px;
@@ -165,11 +167,24 @@
                 color: black;
                 // padding: 20px 30px;
 
-                padding: 30px 20px;
+
+                padding: 40px 35px;
+
+                p{
+                    font-size: 18px;
+                    
+                }
             }
             .bottom {
+                padding: 15px 10px;
+                flex: 1;
+                display: flex;
+                justify-content: center;
+
+                width: 100%;
+                background-color: white;
                 .image-wrapper {
-                    width: 150px;
+                    width: 180px;
                     padding: 10px;
                 }
             }
@@ -285,6 +300,7 @@
                 }
             }
             .success {
+                overflow: hidden;
                 display: flex;
                 flex-direction: row-reverse;
                 background-color: #f0b57dc9;
@@ -308,13 +324,15 @@
                     padding: 20px 10px;
                     position: relative;
                     .image-wrapper {
+                        // overflow: hidden;
                         width: 150px;
                         padding: 10px;
                         position: relative;
 
                         &::after {
+                            // background-color: red;
                             width: 0;
-                            height: 0;
+                            height: 120%;
                             border-top: 122px solid #fff;
                             border-right: 41px solid transparent;
                             content: "";
@@ -322,7 +340,7 @@
                             left: 100%;
                             top: -20px;
                             // right: -100px;
-                            transform: rotate(5deg);
+                            transform: rotate(192deg);
                             // background-color: red;
                         }
                     }
@@ -335,14 +353,16 @@
 @media only screen and (min-width: 1200px) {
     .hero {
         .cover {
+            // width: 90%;
             height: 100vh;
-            justify-content: center;
             flex-direction: row-reverse;
+            justify-content: space-around;
 
             .contact {
                 display: block;
+                // margin-right: 50px;
             }
-            .course {
+            .hero-course {
                 max-width: 720px;
                 row-gap: 25px;
 
@@ -406,7 +426,6 @@
                 width: 80%;
             }
             .success {
-
                 width: 60%;
             }
         }

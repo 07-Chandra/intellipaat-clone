@@ -1,9 +1,12 @@
 .mentors {
     display: flex;
     justify-content: center;
+    
+
     .mentors-container {
         padding: 30px 10px;
         width: 85%;
+        row-gap: 30px;
         // box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.242);
         .header {
             margin-bottom: 70px;
@@ -44,6 +47,9 @@
                 display: none;
             }
         }
+        .intrest-program {
+            display: none;
+        }
     }
 }
 
@@ -53,6 +59,7 @@
         justify-content: center;
         .mentors-container {
             width: 90%;
+            row-gap: 30px;
             // box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.242);
             .header {
                 margin-bottom: 70px;
@@ -66,6 +73,13 @@
                 .second {
                     display: block;
                 }
+            }
+            .intrest-program {
+
+                width: 100%;
+                margin-block: 40px;
+                display: flex;
+                justify-content: center;
             }
         }
     }
@@ -90,7 +104,6 @@
                 .third {
                     display: block;
                 }
-
             }
         }
     }

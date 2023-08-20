@@ -8,79 +8,91 @@
         display: flex;
         flex-direction: column;
         row-gap: 20px;
-        .header {
-            display: flex;
-            column-gap: 30px;
-            .head {
-                column-gap: 20px;
-                display: flex;
-                align-items: center;
-                .blue {
-                    font-size: 15px;
-                    color: var(--blue-color);
+
+        .module-parts {
+            .part1 {
+                .header {
+                    display: flex;
+                    column-gap: 30px;
+                    .head {
+                        column-gap: 20px;
+                        display: flex;
+                        align-items: center;
+                        .blue {
+                            font-size: 15px;
+                            color: var(--blue-color);
+                        }
+                        .green {
+                            font-size: 15px;
+                            color: green;
+                        }
+                    }
+
+                    .download-btn {
+                        display: none;
+                    }
                 }
-                .green {
-                    font-size: 15px;
-                    color: green;
+
+                .module {
+                    // box-sizing: 0px 4px 16px rgb( 0 0 0/8%);
+
+                    padding: 15px;
+                    .item {
+                        display: flex;
+                        // justify-content: center;
+                        // margin-block: 10px;
+                        border-bottom: 2px solid rgb(169, 169, 169);
+
+                        align-items: center;
+                        column-gap: 20px;
+                        padding: 14px 18px;
+                        background-color: white;
+                        box-shadow: 0 2px 16px rgb(0 0 0/8%);
+
+                        .icon-part {
+                            .icon {
+                                font-size: 12px;
+                                color: var(--blue-color);
+                            }
+
+                            .arrow {
+                                font-size: 20px;
+                                font-weight: 900;
+                                //    padding-left: 10px;
+
+                                color: rgb(106, 106, 106);
+                            }
+                        }
+                        .para {
+                            flex-grow: 10;
+                        }
+                    }
+                }
+
+                .desclaimer {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 15px 10px;
+                    row-gap: 20px;
+                    border: 1px dashed var(--orange-color);
+                    box-shadow: 0px 4px 8px rgb(0 0 0/8%);
+                    h3 {
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+                    .desc {
+                        // background-color: red;
+                        font-size: 14px;
+                        color: rgb(34, 34, 34);
+                    }
                 }
             }
-
-            .download-btn {
+            .part2 {
                 display: none;
             }
         }
-
-        .module {
-            // box-sizing: 0px 4px 16px rgb( 0 0 0/8%);
-
-            padding: 15px;
-            .item {
-                display: flex;
-                // justify-content: center;
-                // margin-block: 10px;
-                border-bottom: 2px solid rgb(169, 169, 169);
-
-                align-items: center;
-                column-gap: 20px;
-                padding: 14px 18px;
-                background-color: white;
-                box-shadow: 0 2px 16px rgb(0 0 0/8%);
-
-                .icon-part {
-                    .icon {
-                        font-size: 12px;
-                        color: var(--blue-color);
-                    }
-
-                    .arrow {
-                        font-size: 20px;
-                        font-weight: 900;
-                        //    padding-left: 10px;
-
-                        color: rgb(106, 106, 106);
-                    }
-                }
-                .para {
-                    flex-grow: 10;
-                }
-            }
-        }
-
-        .desclaimer {
-            display: flex;
-            flex-direction: column;
-            padding: 15px 10px;
-            row-gap: 20px;
-            border: 1px dashed var(--orange-color);
-            box-shadow: 0px 4px 8px rgb(0 0 0/8%);
-            h3 {
-                font-size: 16px;
-                font-weight: 600;
-            }
-            .desc {
-                font-size: 14px;
-                color: rgb(34, 34, 34);
-            }
+        .interested-program {
+            display: none;
         }
     }
 }
@@ -91,9 +103,51 @@
             // background-color: rgb(247, 247, 247);
             width: 80%;
 
-            .header {
-                .download-btn {
-                    display: block;
+            .module-parts {
+             
+                .part1 {
+                    flex: 2;
+                    .header {
+                        .download-btn {
+                            display: block;
+                        }
+                    }
+                    .interested-program {
+                        display: flex;
+                    }
+                }
+                .part2{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .curriculum {
+        .curiculum-container {
+            // background-color: rgb(247, 247, 247);
+            width: 80%;
+
+            .module-parts {
+                display: flex;
+
+                .part1 {
+                    flex: 2;
+                    .header {
+                        .download-btn {
+                            display: block;
+                        }
+                    }
+                    .interested-program {
+                        display: flex;
+                    }
+                }
+                .part2{
+                    flex: 1;
+                    display: flex;
+                    margin-top: 20px;
                 }
             }
         }

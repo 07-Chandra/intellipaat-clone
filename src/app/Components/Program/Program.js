@@ -1,6 +1,7 @@
 import React from "react";
 import "./Program.scss";
 import { AiOutlineCheckCircle } from "react-icons/ai";
+import Caunselling from "@/app/SubComponents/Caunselling/Caunselling";
 function Program() {
     return (
         <div className="program">
@@ -16,110 +17,118 @@ function Program() {
                         more.
                     </p>
                 </div>
-                <div className="highlight card">
-                    <div className="header">
-                        <h2>Key Highlights</h2>
+
+                <div className="wrap-highlight">
+                    <div className="highlight card">
+                        <div className="header">
+                            <h2>Key Highlights</h2>
+                        </div>
+
+                        <div className="points">
+                            <div className="item">
+                                <div className="item-icon">
+                                    <AiOutlineCheckCircle className="icon" />
+                                </div>
+                                <p>
+                                    120 Hrs Live Sessions (5+1 Month Projects
+                                    Session)
+                                </p>
+                            </div>
+                            <div className="item">
+                                <div className="item-icon">
+                                    <AiOutlineCheckCircle className="icon" />
+                                </div>
+                                <p>400 Hrs of Applied Learning</p>
+                            </div>
+                            <div className="item">
+                                <div className="item-icon">
+                                    <AiOutlineCheckCircle className="icon" />
+                                </div>
+                                <p>168 Hrs of Self-paced Learning</p>
+                            </div>
+                            <div className="item">
+                                <div className="item-icon">
+                                    <AiOutlineCheckCircle className="icon" />
+                                </div>
+                                <p>Weekday/Weekend Lectures Available</p>
+                            </div>
+                            <div className="item">
+                                <div className="item-icon">
+                                    <AiOutlineCheckCircle className="icon" />
+                                </div>
+                                <p>Placement Assistance</p>
+                            </div>
+                            <div className="item">
+                                <div className="item-icon">
+                                    <AiOutlineCheckCircle className="icon" />
+                                </div>
+                                <p>50+ Industry Projects & Case Studies</p>
+                            </div>
+                            <div className="item">
+                                <div className="item-icon">
+                                    <AiOutlineCheckCircle className="icon" />
+                                </div>
+                                <p>2 Capstone Projects</p>
+                            </div>
+                            <div className="item">
+                                <div className="item-icon">
+                                    <AiOutlineCheckCircle className="icon" />
+                                </div>
+                                <p>Dedicated Learning Management Team</p>
+                            </div>
+                            <div className="item">
+                                <div className="item-icon">
+                                    <AiOutlineCheckCircle className="icon" />
+                                </div>
+                                <p>1:1 Mock Interview</p>
+                            </div>
+                            <div className="item">
+                                <div className="item-icon">
+                                    <AiOutlineCheckCircle className="icon" />
+                                </div>
+                                <p>24*7 Support</p>
+                            </div>
+                            <div className="item">
+                                <div className="item-icon">
+                                    <AiOutlineCheckCircle className="icon" />
+                                </div>
+                                <p>Learn from IIT Faculty & Industry Experts</p>
+                            </div>
+                            <div className="item">
+                                <div className="item-icon">
+                                    <AiOutlineCheckCircle className="icon" />
+                                </div>
+                                <p>IITM Pravartak Certification</p>
+                            </div>
+                            <div className="item">
+                                <div className="item-icon">
+                                    <AiOutlineCheckCircle className="icon" />
+                                </div>
+                                <p>
+                                    Designed for Working Professionals and
+                                    Freshers
+                                </p>
+                            </div>
+                            <div className="item">
+                                <div className="item-icon">
+                                    <AiOutlineCheckCircle className="icon" />
+                                </div>
+                                <p>No-cost EMI Option starts at INR4,999</p>
+                            </div>
+                            <div className="item">
+                                <div className="item-icon">
+                                    <AiOutlineCheckCircle className="icon" />
+                                </div>
+                                <p>
+                                    2 Days Campus immersion at IIT Madras
+                                    Research Park
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div className="points">
-                        <div className="item">
-                            <div className="item-icon">
-                                <AiOutlineCheckCircle className="icon" />
-                            </div>
-                            <p>
-                                120 Hrs Live Sessions (5+1 Month Projects
-                                Session)
-                            </p>
-                        </div>
-                        <div className="item">
-                            <div className="item-icon">
-                                <AiOutlineCheckCircle className="icon" />
-                            </div>
-                            <p>400 Hrs of Applied Learning</p>
-                        </div>
-                        <div className="item">
-                            <div className="item-icon">
-                                <AiOutlineCheckCircle className="icon" />
-                            </div>
-                            <p>168 Hrs of Self-paced Learning</p>
-                        </div>
-                        <div className="item">
-                            <div className="item-icon">
-                                <AiOutlineCheckCircle className="icon" />
-                            </div>
-                            <p>Weekday/Weekend Lectures Available</p>
-                        </div>
-                        <div className="item">
-                            <div className="item-icon">
-                                <AiOutlineCheckCircle className="icon" />
-                            </div>
-                            <p>Placement Assistance</p>
-                        </div>
-                        <div className="item">
-                            <div className="item-icon">
-                                <AiOutlineCheckCircle className="icon" />
-                            </div>
-                            <p>50+ Industry Projects & Case Studies</p>
-                        </div>
-                        <div className="item">
-                            <div className="item-icon">
-                                <AiOutlineCheckCircle className="icon" />
-                            </div>
-                            <p>2 Capstone Projects</p>
-                        </div>
-                        <div className="item">
-                            <div className="item-icon">
-                                <AiOutlineCheckCircle className="icon" />
-                            </div>
-                            <p>Dedicated Learning Management Team</p>
-                        </div>
-                        <div className="item">
-                            <div className="item-icon">
-                                <AiOutlineCheckCircle className="icon" />
-                            </div>
-                            <p>1:1 Mock Interview</p>
-                        </div>
-                        <div className="item">
-                            <div className="item-icon">
-                                <AiOutlineCheckCircle className="icon" />
-                            </div>
-                            <p>24*7 Support</p>
-                        </div>
-                        <div className="item">
-                            <div className="item-icon">
-                                <AiOutlineCheckCircle className="icon" />
-                            </div>
-                            <p>Learn from IIT Faculty & Industry Experts</p>
-                        </div>
-                        <div className="item">
-                            <div className="item-icon">
-                                <AiOutlineCheckCircle className="icon" />
-                            </div>
-                            <p>IITM Pravartak Certification</p>
-                        </div>
-                        <div className="item">
-                            <div className="item-icon">
-                                <AiOutlineCheckCircle className="icon" />
-                            </div>
-                            <p>
-                                Designed for Working Professionals and Freshers
-                            </p>
-                        </div>
-                        <div className="item">
-                            <div className="item-icon">
-                                <AiOutlineCheckCircle className="icon" />
-                            </div>
-                            <p>No-cost EMI Option starts at INR4,999</p>
-                        </div>
-                        <div className="item">
-                            <div className="item-icon">
-                                <AiOutlineCheckCircle className="icon" />
-                            </div>
-                            <p>
-                                2 Days Campus immersion at IIT Madras Research
-                                Park
-                            </p>
-                        </div>
+                    <div className="caunselling-form">
+                        <Caunselling className="comp"/>
                     </div>
                 </div>
 

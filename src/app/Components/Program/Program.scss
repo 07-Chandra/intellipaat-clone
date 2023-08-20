@@ -29,45 +29,50 @@
             }
         }
 
-        .highlight {
-            display: flex;
-            flex-direction: column;
-            padding: 30px 15px;
-            background-color: white;
-            row-gap: 20px;
-            align-items: start;
-            border-radius: 10px;
-            border-top: 3px solid rgb(15, 99, 244);
-
-            .header {
-                h2 {
-                    font-weight: 550;
-                    font-size: 22px;
-                }
-            }
-
-            .points {
-                width: 100%;
+        .wrap-highlight {
+            .highlight {
                 display: flex;
                 flex-direction: column;
-                row-gap: 15px;
-                .item {
-                    width: 100%;
-                    display: flex;
-                    column-gap: 15px;
+                padding: 30px 15px;
+                background-color: white;
+                row-gap: 20px;
+                align-items: start;
+                border-radius: 10px;
+                border-top: 3px solid rgb(15, 99, 244);
 
-                    .item-icon {
-                        .icon {
-                            font-size: 21px;
-                            color: rgb(15, 99, 244);
-                        }
-                    }
-
-                    p {
+                .header {
+                    h2 {
                         font-weight: 550;
-                        font-size: 14px;
+                        font-size: 22px;
                     }
                 }
+
+                .points {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 15px;
+                    .item {
+                        width: 100%;
+                        display: flex;
+                        column-gap: 15px;
+
+                        .item-icon {
+                            .icon {
+                                font-size: 21px;
+                                color: rgb(15, 99, 244);
+                            }
+                        }
+
+                        p {
+                            font-weight: 550;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            .caunselling-form{
+                display: none;
             }
         }
 
@@ -245,7 +250,9 @@
 
 @media only screen and (min-width: 1200px) {
     .program {
+        margin-block: 50px;
         .program-container {
+            width: 75%;
             row-gap: 30px;
 
             background-color: var(--main-color);
@@ -260,23 +267,32 @@
                 }
             }
 
-            .highlight {
-                .header {
-                    h2 {
-                        font-size: 19px;
-                    }
+            .wrap-highlight {
+                display: flex;
+                flex-direction: row;
+                column-gap: 30px;
+
+                .caunselling-form {
+                   display: flex;
                 }
+                .highlight {
+                    .header {
+                        h2 {
+                            font-size: 19px;
+                        }
+                    }
 
-                .points {
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr);
+                    .points {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
 
-                    gap: 15px;
-                    row-gap: 17px;
-                    .item {
-                        .item-icon {
-                            .icon {
-                                font-size: 25px;
+                        gap: 15px;
+                        row-gap: 17px;
+                        .item {
+                            .item-icon {
+                                .icon {
+                                    font-size: 25px;
+                                }
                             }
                         }
                     }
@@ -285,7 +301,7 @@
 
             .about {
                 display: grid;
-                grid-template-columns: 65% 35%;
+                grid-template-columns: 55% 45%;
                 gap: 20px;
 
                 .header {
@@ -299,15 +315,16 @@
                 }
 
                 .achivement {
+                    width: 89%;
                     // padding: 15px;
 
                     order: 2;
-                    margin-top: -100px;
+                    margin-top: -150px;
                 }
                 .certificate {
                     order: 1;
                     .image-wrapper {
-                        width: 350px;
+                        width: 400px;
                     }
                 }
             }

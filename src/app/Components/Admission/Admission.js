@@ -75,57 +75,68 @@ function Admission() {
 
                     <div className="admission-fees">
                         <div className="item">
-                            <h2 className="subheading">Total Admission Fee</h2>
+                            <div className="left-part">
+                                <h2 className="subheading">
+                                    Total Admission Fee
+                                </h2>
 
-                            <p className="price">₹ 80,028</p>
+                                <p className="price">₹ 80,028</p>
+                            </div>
 
                             <button className="btn">Apply Now</button>
                         </div>
 
                         <div className="item">
-                            <h2 className="subheading">
-                                No Cost EMI Starts at
-                            </h2>
+                            <div className="left-part">
+                                <h2 className="subheading">
+                                    No Cost EMI Starts at
+                                </h2>
 
-                            <p className="price">₹ 4,999</p>
-
-                            <p>
-                                We partnered with financing companies to provide
-                                competitive finance option at 0% interest rate
-                                with no hidden costs
-                            </p>
-                        </div>
-
-                        <div className="item">
-                            <h2 className="subheading">Financing Partners</h2>
-
-                            <div className="image-wrapper">
-                                <img
-                                    src="https://intellipaat.com/wp-content/themes/intellipaat/images/pg-fee-web.png"
-                                    alt="company"
-                                />
+                                <p className="price">₹ 4,999</p>
                             </div>
-                            <p className="color">
-                                The credit facility is provided by a third party
-                                credit facility provider and any arrangement
-                                with such third party is outside Intellipaat’s
-                                purview.
-                            </p>
+
+                            <div className="right-part">
+                                <p>
+                                    We partnered with financing companies to
+                                    provide competitive finance option at 0%
+                                    interest rate with no hidden costs
+                                </p>
+
+                                <h2 className="subheading">
+                                    Financing Partners
+                                </h2>
+
+                                <div className="image-wrapper">
+                                    <img
+                                        src="https://intellipaat.com/wp-content/themes/intellipaat/images/pg-fee-web.png"
+                                        alt="company"
+                                    />
+                                </div>
+                                <p className="color">
+                                    The credit facility is provided by a third
+                                    party credit facility provider and any
+                                    arrangement with such third party is outside
+                                    Intellipaat’s purview.
+                                </p>
+                            </div>
                         </div>
 
                         <div className="item">
-                            <h2 className="subheading">
-                                Upcoming Application Deadline
-                            </h2>
+                            <div className="left">
+                                <h2 className="subheading">
+                                    Upcoming Application Deadline
+                                </h2>
 
-                            <div className="price orange">19th Aug 2023</div>
-
-                            <p>
-                                Admissions are closed once the requisite number
-                                of participants enroll for the upcoming cohort.
-                                Apply early to secure your seat.
-                            </p>
+                                <div className="price orange">
+                                    19th Aug 2023
+                                </div>
+                            </div>
                         </div>
+                        <p className="bottom-para">
+                            Admissions are closed once the requisite number of
+                            participants enroll for the upcoming cohort. Apply
+                            early to secure your seat.
+                        </p>
                     </div>
                 </div>
             </div>

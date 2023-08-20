@@ -1,5 +1,6 @@
 import React from "react";
 import "./Mentors.scss";
+import Interested from "@/app/SubComponents/Interested/Interested";
 function Mentors() {
     return (
         <div className="mentors">
@@ -74,6 +75,10 @@ function Mentors() {
                             </p>
                         </div>
                     </div>
+                </div>
+
+                <div className="intrest-program">
+                    <Interested/>
                 </div>
             </div>
         </div>
