@@ -11,23 +11,20 @@ import Services from "./Components/Services/Services";
 import Transition from "./Components/Transition/Transition";
 import Contact from "./SubComponents/Contact/Contact";
 
-
 export default function Home() {
-  return (
-    <main>
-     <Hero/>
-     <Program/>
-     <Transition/>
-      <Course/>
-      <Mentors/>
-      <Curriculum/>
-      <Project/>
-      <Reviews/>
-      <Services/>
-      <Admission/>
-      <Cohort/>
-      
-    
-    </main>
-  )
+    return (
+        <main>
+            <Hero />
+            <Program />
+            <Transition />
+            <Course />
+            <Mentors />
+            <Curriculum />
+            <Project />
+            <Reviews />
+            <Services />
+            <Admission />
+            <Cohort />
+        </main>
+    );
 }

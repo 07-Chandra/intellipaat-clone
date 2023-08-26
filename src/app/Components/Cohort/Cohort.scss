@@ -106,14 +106,35 @@
         width: 85%;
 
         .item {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.333);
+            cursor: pointer;
             display: flex;
-            // justify-content: center;
-            margin-block: 2px;
-            align-items: center;
-            column-gap: 20px;
-            padding: 14px 20px;
+            flex-direction: column;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.333);
             background-color: white;
+            .que {
+                display: flex;
+                // justify-content: center;
+                // margin-block: 2px;
+
+                align-items: center;
+                column-gap: 20px;
+                padding: 14px 20px;
+                border: 1px solid rgb(140, 140, 140);
+            }
+
+            .ans{
+                padding: 10px 40px;
+
+                p{
+                    background-color: white;
+                    line-height: 28px;
+                    margin-block: 20px;
+                }
+
+                ul{
+                    margin-left: 30px;
+                }
+            }
 
             .icon-part {
                 .arrow {

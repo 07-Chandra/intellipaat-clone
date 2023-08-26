@@ -60,6 +60,10 @@
                         font-size: 14px;
                         border: 1px solid rgb(131, 130, 130);
                         width: 180px;
+
+                        // &:active{
+                        //     background-color: red;
+                        // }
                     }
                     .start {
                         background-color: var(--purple-color);
@@ -142,6 +146,7 @@
                 align-items: center;
                 width: 100%;
                 .items {
+                    cursor: pointer;
                     width: 100%;
                     display: flex;
                     background-color: white;

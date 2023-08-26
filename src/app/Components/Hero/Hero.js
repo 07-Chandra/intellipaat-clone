@@ -1,7 +1,6 @@
 import React from "react";
 import "./Hero.scss";
 import Contact from "@/app/SubComponents/Contact/Contact";
-import { AiOutlineDown } from "react-icons/ai";
 
 function Hero() {
     return (

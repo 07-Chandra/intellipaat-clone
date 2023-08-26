@@ -56,11 +56,13 @@
                         width: 100%;
                         display: flex;
                         column-gap: 15px;
+                        align-items: center;
 
                         .item-icon {
                             .icon {
-                                font-size: 21px;
-                                color: rgb(15, 99, 244);
+                                fill: rgb(15, 99, 244);
+                                width: 23px;
+                                height: 23px;
                             }
                         }
 
@@ -71,7 +73,7 @@
                     }
                 }
             }
-            .caunselling-form{
+            .caunselling-form {
                 display: none;
             }
         }
@@ -273,7 +275,7 @@
                 column-gap: 30px;
 
                 .caunselling-form {
-                   display: flex;
+                    display: flex;
                 }
                 .highlight {
                     .header {
