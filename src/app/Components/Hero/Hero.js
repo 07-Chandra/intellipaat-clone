@@ -1,11 +1,16 @@
 import React from "react";
+
 import "./Hero.scss";
 import Contact from "@/app/SubComponents/Contact/Contact";
+import { axiosClient } from "@/app/Utils/axiosClient";
 
-function Hero() {
+async function Hero() {
+   
+
     return (
         <div className="hero">
             <div className="cover">
+                {/* <p>{courseData[0].attributes.courseName}</p> */}
                 <div className="contact-form">
                     <Contact />
                 </div>
@@ -111,8 +116,46 @@ function Hero() {
                     </div>
                 </div>
             </div>
+
+            <div>
+                {/* {
+                    // courseData[0]?.map((course , id)=> {
+
+                    //     <div className="div" key={id}>
+                    //         <p className="temp">
+                    //             {console.log(course)}
+                    //         </p>
+                    //     </div>
+                    // })
+                } */}
+
+                {/* <p style={{backgroundColor:'red'}}> {courseData?.id}</p> */}
+                {/* <h1>hello there {(courseData) ? courseData[0]?.attributes?.courseName : "byy"}</h1> */}
+            </div>
         </div>
     );
 }
-
 export default Hero;
+
+// export async function getServerSideProps() {
+
+//     console.log("this is server");
+
+//     let response;
+//     response = await fetch("http://localhost:1337/api/courses");
+//     const data = await response.json();
+//     console.log("response data", response);
+
+//     // async function fetchData() {
+//     //     try {
+
+//     //     } catch (error) {
+//     //         console.error("Error fetching course data:", error);
+//     //     }
+//     // }
+
+//     // useEffect(() => {
+//     //     fetchData();
+//     // }, []);
+//     return { data: { response } };
+// }

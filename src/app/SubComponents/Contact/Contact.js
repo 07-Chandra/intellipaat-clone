@@ -2,11 +2,13 @@ import React from "react";
 import "./Contact.scss";
 import { AiOutlineDown } from "react-icons/ai";
 
-function Contact() {
+function Contact({  }) {
+    // console.log("result", result[0]?.attributes?.courseName);
     return (
         <div className="contact">
             <div className="contact-form">
                 <div className="cover1">
+                    {/* <h1>hello there {result[0]?.attributes?.courseName}</h1> */}
                     <h3 className="title">
                         Upskill for Your <span>Dream Job</span>
                     </h3>
