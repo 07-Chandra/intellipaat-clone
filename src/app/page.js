@@ -13,19 +13,28 @@ import Reviews from "./Components/Reviews/Reviews";
 import Services from "./Components/Services/Services";
 import Transition from "./Components/Transition/Transition";
 import Contact from "./SubComponents/Contact/Contact";
-
-import SSRPage from "./SubComponents/SSRPage";
 import { axiosClient } from "./Utils/axiosClient";
 import axios from "axios";
 
 function Home() {
     const [courseData, setCourseData] = useState(null);
+    const [programData, setProgramData] = useState(null);
 
     async function fetchData() {
         try {
-            const response = await axiosClient.get("/courses");
-            const data = response?.data;
-            console.log("api call", data);
+            const response = await axiosClient.get(
+                "/courses?populate[scoreImage]=*&populate[ratings][populate] =*"
+            );
+            const data = await response?.data?.data;
+            await setCourseData(data);
+
+            const program = await axiosClient.get(
+                "/cloud-computings?populate[Program][populate]=*"
+            );
+
+            const programRes = await program?.data?.data;
+            await setProgramData(programRes);
+
         } catch (error) {
             console.error("Error fetching course data:", error);
         }
@@ -33,30 +42,25 @@ function Home() {
 
     useEffect(() => {
         fetchData();
-        console.log("courseData is ", courseData);
     }, []);
 
     useEffect(() => {
-        console.log("coureData 2", courseData);
-    }, [courseData]);
+        console.log("programData 2", programData);
+    }, [courseData, programData]);
 
     return (
-        // <main>
-        //     <Hero />
-        //     {/* <Program />
-        //     <Transition />
-        //     <Course />
-        //     <Mentors />
-        //     <Curriculum />
-        //     <Project />
-        //     <Reviews />
-        //     <Services />
-        //     <Admission />
-        // </main>
-
-        <div className="head">
-            <Cohort />
-        </div>
+        <main>
+            <Hero props={courseData} />
+            {/* <Program program = {programData}/> */}
+            {/* <Transition />
+            <Course />
+            <Mentors />
+            <Curriculum />
+            <Project />
+            <Reviews />
+            <Services />
+            <Admission /> */}
+        </main>
     );
 }
 
