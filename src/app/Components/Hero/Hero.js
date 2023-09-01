@@ -10,9 +10,6 @@ function Hero({ props }) {
     // console.log("hero data" , );
     const courseDetail = props ? props[0].attributes.courseDetail : "";
     const companyRatings = props ? props[0].attributes.ratings : "";
-
-
-
     const dataArray = [];
 
     if (props) {

@@ -32,8 +32,12 @@
                     align-items: center;
                     border-radius: 50%;
                     background-color: var(--purple-color);
+                    overflow: hidden;
 
                     .icon {
+
+                         width: 80%;
+                         height: 80%;
                         color: white;
                         font-size: 35px;
                     }

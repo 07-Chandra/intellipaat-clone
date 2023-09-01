@@ -23,18 +23,18 @@ function Home() {
     async function fetchData() {
         try {
             const response = await axiosClient.get(
-                "/courses?populate[scoreImage]=*&populate[ratings][populate] =*"
+                "/cloud-computings?populate[Program][populate]=*&populate[Course][populate]=*?&populate[mentors][populate]=*"
             );
             const data = await response?.data?.data;
             await setCourseData(data);
 
             const program = await axiosClient.get(
-                "/cloud-computings?populate[Program][populate]=*"
+                // "/cloud-computings?populate[Program][populate]=*&populate[Course][populate]=*?&populate[mentors][populate]=*&populate[project][populate]=advancement.img,img?&populate[review][populate]=reviewTop.profileImg,reviewCenter.profileImg,reviewBottom.profileImg,img,reviewTop.log"
+                "/cloud-computings?populate[Program][populate]=*&populate[Course][populate]=*?&populate[mentors][populate]=*&populate[project][populate]=advancement.img,img?&populate[review][populate]=reviewTop.profileImg,reviewCenter.profileImg,reviewBottom.profileImg,img,reviewTop.log,reviewBottom.icon"
             );
 
             const programRes = await program?.data?.data;
             await setProgramData(programRes);
-
         } catch (error) {
             console.error("Error fetching course data:", error);
         }
@@ -50,16 +50,22 @@ function Home() {
 
     return (
         <main>
-            <Hero props={courseData} />
+            {/* <Hero props={courseData} /> */}
             {/* <Program program = {programData}/> */}
-            {/* <Transition />
-            <Course />
-            <Mentors />
-            <Curriculum />
-            <Project />
-            <Reviews />
-            <Services />
-            <Admission /> */}
+            {/* <Transition  /> */}
+            {/* <Course course = {(programData) ? programData[0]?.attributes.Course : ""} /> */}
+            {/* <Mentors
+                mentors={(programData) ? programData[0]?.attributes.mentors : ""}
+            /> */}
+            {/* <Curriculum /> */}
+            {/* <Project
+                project={programData ? programData[0]?.attributes.project : ""}
+            /> */}
+            <Reviews
+                review={programData ? programData[0]?.attributes.review : ""}
+            />
+            {/* <Services /> */}
+            {/* <Admission />  */}
         </main>
     );
 }

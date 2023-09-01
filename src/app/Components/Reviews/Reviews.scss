@@ -31,7 +31,7 @@
                     // position: absolute;
                     top: 0;
                     left: 0;
-                    background-image: url("https://intellipaat.com/wp-content/themes/intellipaat/images/master-course-sprite.svg?tr=w-400,h-175");
+                    // background-image: url("https://intellipaat.com/wp-content/themes/intellipaat/images/master-course-sprite.svg?tr=w-400,h-175");
                     width: 106px;
                     height: 15px;
                     background-position: -4px -271px;
@@ -78,6 +78,8 @@
                         cursor: pointer;
 
                         .icon {
+                            width: 80%;
+                            height: 80%;
                             color: white;
                             font-size: 26px;
                         }

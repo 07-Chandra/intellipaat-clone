@@ -1,7 +1,6 @@
 .mentors {
     display: flex;
     justify-content: center;
-    
 
     .mentors-container {
         padding: 30px 10px;
@@ -75,7 +74,6 @@
                 }
             }
             .intrest-program {
-
                 width: 100%;
                 margin-block: 40px;
                 display: flex;
@@ -97,12 +95,19 @@
             }
 
             .all-info {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 20px;
-
+                display: block;
+                width: 100%;
+                .info {
+                    display: none;
+                }
+                .second {
+                    display: none;
+                }
                 .third {
-                    display: block;
+                     width: 100%;
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 20px;
                 }
             }
         }
