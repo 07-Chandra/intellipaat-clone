@@ -1,6 +1,5 @@
 import React from "react";
 import "./Reviews.scss";
-// import { FaLinkedinIn } from "react-icons/fa6";
 function Reviews({ review }) {
     const img = review ? review?.img?.data.attributes.url : "";
 

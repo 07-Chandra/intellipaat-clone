@@ -86,7 +86,7 @@
                 .icon {
                     transform: rotate(90deg);
                     margin: 10px auto;
-                    background-image: url(https://intellipaat.com/wp-content/themes/intellipaat/images/master-course-sprite.svg?tr=w-400,h-175);
+                    // background-image: url(https://intellipaat.com/wp-content/themes/intellipaat/images/master-course-sprite.svg?tr=w-400,h-175);
                     width: 30px;
                     height: 32px;
                     margin: 0 auto;
@@ -124,9 +124,12 @@
                 }
             }
 
+            .image-wrapper {
+                width: 35px;
+            }
             .icon {
-                color: rgb(21, 114, 220);
-                font-size: 35px;
+                width: 100%;
+                height: 100%;
             }
         }
     }
@@ -159,6 +162,7 @@
         grid-template-columns: 60% 40%;
         justify-content: center;
         align-items: center;
+        padding: 30px 0px;
         .transition {
             max-width: 600px;
             justify-self: center;
@@ -235,7 +239,8 @@
                 padding: 10px;
                 margin-right: -80px;
             }
-            .a {
+            .a0,
+            .a2 {
                 margin-left: -80px;
             }
         }

@@ -17,24 +17,18 @@ import { axiosClient } from "./Utils/axiosClient";
 import axios from "axios";
 
 function Home() {
-    const [courseData, setCourseData] = useState(null);
-    const [programData, setProgramData] = useState(null);
+    const [apiData, setApiData] = useState(null);
 
     async function fetchData() {
         try {
-            const response = await axiosClient.get(
-                "/cloud-computings?populate[Program][populate]=*&populate[Course][populate]=*?&populate[mentors][populate]=*"
-            );
-            const data = await response?.data?.data;
-            await setCourseData(data);
-
             const program = await axiosClient.get(
-                // "/cloud-computings?populate[Program][populate]=*&populate[Course][populate]=*?&populate[mentors][populate]=*&populate[project][populate]=advancement.img,img?&populate[review][populate]=reviewTop.profileImg,reviewCenter.profileImg,reviewBottom.profileImg,img,reviewTop.log"
-                "/cloud-computings?populate[Program][populate]=*&populate[Course][populate]=*?&populate[mentors][populate]=*&populate[project][populate]=advancement.img,img?&populate[review][populate]=reviewTop.profileImg,reviewCenter.profileImg,reviewBottom.profileImg,img,reviewTop.log,reviewBottom.icon"
+                // "/cloud-computings?&populate[hero][populate]=scoreImage,ratings.rating1,ratings.rating2,ratings.rating3&?populate[Program][populate]=*&populate[Course][populate]=*?&populate[mentors][populate]=*&populate[project][populate]=advancement.img,img?&populate[review][populate]=reviewTop.profileImg,reviewCenter.profileImg,reviewBottom.profileImg,img,reviewTop.log,reviewBottom.icon?&populate[transition][populate]=features.img,status.img,company.img,arrowImg,nextCompany.img,img"
+                // "http://localhost:1337/api/cloud-computings?&populate[hero][populate]=scoreImage,ratings.img&?populate[Program][populate]=*&populate[Course][populate]=*?&populate[mentors][populate]=*&populate[project][populate]=advancement.img,img?&populate[review][populate]=reviewTop.profileImg,reviewCenter.profileImg,reviewBottom.profileImg,img,reviewTop.log,reviewBottom.icon?&populate[transition][populate]=features.img,status.img,company.img,arrowImg,nextCompany.img,img"
+                "http://localhost:1337/api/cloud-computings?&populate[services][populate]=img,alumniImg,allInfo.img,buttons.img,peerImages.img&populate[hero][populate]=scoreImage,ratings.img&?populate[Program][populate]=*&populate[Course][populate]=*?&populate[mentors][populate]=*&populate[project][populate]=advancement.img,img?&populate[review][populate]=reviewTop.profileImg,reviewCenter.profileImg,reviewBottom.profileImg,img,reviewTop.log,reviewBottom.icon?&populate[transition][populate]=features.img,status.img,company.img,arrowImg,nextCompany.img,img"
             );
 
             const programRes = await program?.data?.data;
-            await setProgramData(programRes);
+            await setApiData(programRes);
         } catch (error) {
             console.error("Error fetching course data:", error);
         }
@@ -45,27 +39,33 @@ function Home() {
     }, []);
 
     useEffect(() => {
-        console.log("programData 2", programData);
-    }, [courseData, programData]);
+        console.log("apiData 2", apiData);
+    }, [apiData]);
+
+    const heroData = apiData ? apiData[0]?.attributes?.hero : "";
+
+    // console.log("hero ", heroData);
 
     return (
         <main>
-            {/* <Hero props={courseData} /> */}
-            {/* <Program program = {programData}/> */}
-            {/* <Transition  /> */}
-            {/* <Course course = {(programData) ? programData[0]?.attributes.Course : ""} /> */}
+            {/* <Hero props={apiData ? apiData[0]?.attributes?.hero : ""} /> */}
+            {/* <Program program = {apiData}/> */}
+            {/* <Transition
+                data={apiData ? apiData[0]?.attributes.transition : ""}
+            /> */}
+            {/* <Course course = {(apiData) ? apiData[0]?.attributes.Course : ""} /> */}
             {/* <Mentors
-                mentors={(programData) ? programData[0]?.attributes.mentors : ""}
+                mentors={(apiData) ? apiData[0]?.attributes.mentors : ""}
             /> */}
             {/* <Curriculum /> */}
             {/* <Project
-                project={programData ? programData[0]?.attributes.project : ""}
+                project={apiData ? apiData[0]?.attributes.project : ""}
             /> */}
-            <Reviews
-                review={programData ? programData[0]?.attributes.review : ""}
-            />
-            {/* <Services /> */}
-            {/* <Admission />  */}
+            {/* <Reviews
+                review={apiData ? apiData[0]?.attributes.review : ""}
+            /> */}
+            <Services data={apiData ? apiData[0]?.attributes.services : ""} />
+            {/* <Admission /> */}
         </main>
     );
 }

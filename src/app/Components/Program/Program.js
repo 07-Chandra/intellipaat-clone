@@ -1,7 +1,6 @@
 import React from "react";
 import "./Program.scss";
 import Caunselling from "@/app/SubComponents/Caunselling/Caunselling";
-import { Value } from "sass";
 function Program({ program }) {
     // console.log("program" , program);
 

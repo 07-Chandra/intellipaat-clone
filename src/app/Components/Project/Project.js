@@ -2,10 +2,6 @@
 import React, { useState } from "react";
 import "./Project.scss";
 
-// import { RiUserSettingsLine } from "react-icons/ri";
-// import { HiMiniUserGroup } from "react-icons/hi2";
-// import { IoMdSettings } from "react-icons/io";
-
 function Project({ project }) {
     const advancement = project ? project?.advancement : "";
     const stage = project ? project.levels : " ";

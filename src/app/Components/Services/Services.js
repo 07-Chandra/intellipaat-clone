@@ -7,25 +7,44 @@ import { BsCalendar2Event } from "react-icons/bs";
 import { MdMiscellaneousServices } from "react-icons/md";
 import { TfiAnnouncement } from "react-icons/tfi";
 import { HiUserGroup } from "react-icons/hi";
-function Services() {
+function Services({ data }) {
+    console.log("service data ", data);
+
+    const stages = data ? data?.stage : "";
     const [state, setState] = useState(1);
     const [imageCount, setImageCount] = useState(1);
+    const arr = data ? data.allInfo : "";
 
+    function createPairs(arr) {
+        const pairs = [];
+        for (let i = 0; i < arr.length; i += 2) {
+            if (i + 1 < arr.length) {
+                pairs.push([arr[i], arr[i + 1]]);
+            } else {
+                pairs.push([arr[i]]);
+            }
+        }
+        return pairs;
+    }
 
-    console.log( "value is : " , imageCount);
+    const pairsArray = createPairs(arr);
+
+    const first = pairsArray ? pairsArray[0] : "";
+    const second = pairsArray ? pairsArray[1] : "";
+    const third = pairsArray ? pairsArray[2] : "";
 
     return (
         <div className="service">
             <div className="service-container">
                 <h2 className="heading">
-                    Career Services By <span>Intellipaat</span>
+                    <span>{data?.title}</span>
                 </h2>
 
                 <div className="main-part">
                     <div className="career">
                         <div className="image-wrapper">
                             <img
-                                src="https://intellipaat.com/course-image/2020/08/career-services-1.png"
+                                src={data?.img?.data.attributes.url}
                                 alt="service"
                             />
                         </div>
@@ -33,13 +52,21 @@ function Services() {
 
                     <div className="right-part">
                         <div className="btn-wrapper">
-                            <button
-                                className={`btn1 ${state == 1 ? "start" : ""}`}
-                                onClick={() => setState(1)}
-                            >
-                                Job Assitance
-                            </button>
-                            <button
+                            {stages
+                                ? Object.entries(stages).map(([key, value]) => (
+                                      <button
+                                          key={key}
+                                          className={`btn1 ${
+                                              state == { key } ? "start" : ""
+                                          }`}
+                                          onClick={() => setState(key)}
+                                      >
+                                          {value}
+                                      </button>
+                                  ))
+                                : ""}
+
+                            {/* <button
                                 className={`btn1 ${state == 2 ? "start" : ""}`}
                                 onClick={() => setState(2)}
                             >
@@ -50,68 +77,45 @@ function Services() {
                                 onClick={() => setState(3)}
                             >
                                 Profile Building
-                            </button>
+                            </button> */}
                         </div>
 
                         {state == 1 ? (
                             <>
-                                <div className="placement">
-                                    <div className="item">
-                                        <div className="image-wrapper">
-                                            <img
-                                                src="https://intellipaat.com/course-image/2020/08/guaranteed.png"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div className="about">
-                                            <h2 className="subheading">
-                                                Placement Assistance
-                                            </h2>
-                                            <p className="footer">
-                                                After 100% of the course
-                                                completions
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <p className="desc">
-                                        Placement opportunities are provided
-                                        once the learner is moved to the
-                                        placement pool. Get noticed by our 400+
-                                        hiring partners.
-                                    </p>
-                                </div>
-
-                                <div className="placement">
-                                    <div className="item">
-                                        <div className="image-wrapper">
-                                            <img
-                                                src="https://intellipaat.com/course-image/2020/08/job_portal.png"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div className="about">
-                                            <h2 className="subheading">
-                                                Exclusive access to Intellipaat
-                                                Job portal
-                                            </h2>
-                                            <p className="footer">
-                                                After 80% of the course
-                                                completion
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <p className="desc">
-                                        Exclusive access to our dedicated job
-                                        portal and apply for jobs. More than 400
-                                        hiring partners’ including top start-ups
-                                        and product companies hiring our
-                                        learners. Mentored support on job search
-                                        and relevant jobs for your career
-                                        growth.
-                                    </p>
-                                </div>
+                                {first
+                                    ? first.map((element, id) => {
+                                          return (
+                                              <div
+                                                  className="placement"
+                                                  key={id}
+                                              >
+                                                  {console.log(
+                                                      "element",
+                                                      element
+                                                  )}
+                                                  <div className="item">
+                                                      <div className="image-wrapper">
+                                                          <img
+                                                              src="https://intellipaat.com/course-image/2020/08/guaranteed.png"
+                                                              alt=""
+                                                          />
+                                                      </div>
+                                                      <div className="about">
+                                                          <h2 className="subheading">
+                                                              {element.name}
+                                                          </h2>
+                                                          <p className="footer">
+                                                              {element.type}
+                                                          </p>
+                                                      </div>
+                                                  </div>
+                                                  <p className="desc">
+                                                      {element.about}
+                                                  </p>
+                                              </div>
+                                          );
+                                      })
+                                    : ""}
                             </>
                         ) : (
                             " "
@@ -119,62 +123,40 @@ function Services() {
 
                         {state == 2 ? (
                             <>
-                                <div className="placement">
-                                    <div className="item">
-                                        <div className="image-wrapper">
-                                            <img
-                                                src="https://intellipaat.com/course-image/2020/08/guaranteed.png"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div className="about">
-                                            <h2 className="subheading">
-                                                Mock Interview Preparation
-                                            </h2>
-                                            <p className="footer">
-                                                After 80% of the course
-                                                completions
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <p className="desc">
-                                        Students will go through a number of
-                                        mock interviews conducted by technical
-                                        experts who will then offer tips and
-                                        constructive feedback for reference and
-                                        improvement.
-                                    </p>
-                                </div>
-
-                                <div className="placement">
-                                    <div className="item">
-                                        <div className="image-wrapper">
-                                            <img
-                                                src="https://intellipaat.com/course-image/2020/08/job_portal.png"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div className="about">
-                                            <h2 className="subheading">
-                                                1 on 1 Career Mentoring Sessions
-                                            </h2>
-                                            <p className="footer">
-                                                After 90% of the course
-                                                completion
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <p className="desc">
-                                        Attend one-on-one sessions with career
-                                        mentors on how to develop the required
-                                        skills and attitude to secure a dream
-                                        job based on a learner’s educational
-                                        background, past experience, and future
-                                        career aspirations.
-                                    </p>
-                                </div>
+                                {second
+                                    ? second.map((element, id) => {
+                                          return (
+                                              <div
+                                                  className="placement"
+                                                  key={id}
+                                              >
+                                                  {console.log(
+                                                      "element",
+                                                      element
+                                                  )}
+                                                  <div className="item">
+                                                      <div className="image-wrapper">
+                                                          <img
+                                                              src="https://intellipaat.com/course-image/2020/08/guaranteed.png"
+                                                              alt=""
+                                                          />
+                                                      </div>
+                                                      <div className="about">
+                                                          <h2 className="subheading">
+                                                              {element.name}
+                                                          </h2>
+                                                          <p className="footer">
+                                                              {element.type}
+                                                          </p>
+                                                      </div>
+                                                  </div>
+                                                  <p className="desc">
+                                                      {element.about}
+                                                  </p>
+                                              </div>
+                                          );
+                                      })
+                                    : ""}
                             </>
                         ) : (
                             " "
@@ -182,62 +164,40 @@ function Services() {
 
                         {state == 3 ? (
                             <>
-                                <div className="placement">
-                                    <div className="item">
-                                        <div className="image-wrapper">
-                                            <img
-                                                src="https://intellipaat.com/course-image/2020/08/guaranteed.png"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div className="about">
-                                            <h2 className="subheading">
-                                                Career Oriented Sessions
-                                            </h2>
-                                            <p className="footer">
-                                                Throughout the course
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <p className="desc">
-                                        Over 10+ live interactive sessions with
-                                        an industry expert to gain knowledge and
-                                        experience on how to build skills that
-                                        are expected by hiring managers. These
-                                        will be guided sessions and that will
-                                        help you stay on track with your
-                                        up-skilling objective.
-                                    </p>
-                                </div>
-
-                                <div className="placement">
-                                    <div className="item">
-                                        <div className="image-wrapper">
-                                            <img
-                                                src="https://intellipaat.com/course-image/2020/08/job_portal.png"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div className="about">
-                                            <h2 className="subheading">
-                                                Resume & LinkedIn Profile
-                                                Building
-                                            </h2>
-                                            <p className="footer">
-                                                After 70% of course completion
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <p className="desc">
-                                        Get assistance in creating a world-class
-                                        resume & Linkedin Profile from our
-                                        career services team and learn how to
-                                        grab the attention of the hiring manager
-                                        at the profile shortlisting stage
-                                    </p>
-                                </div>
+                                {third
+                                    ? third.map((element, id) => {
+                                          return (
+                                              <div
+                                                  className="placement"
+                                                  key={id}
+                                              >
+                                                  {console.log(
+                                                      "element",
+                                                      element
+                                                  )}
+                                                  <div className="item">
+                                                      <div className="image-wrapper">
+                                                          <img
+                                                              src="https://intellipaat.com/course-image/2020/08/guaranteed.png"
+                                                              alt=""
+                                                          />
+                                                      </div>
+                                                      <div className="about">
+                                                          <h2 className="subheading">
+                                                              {element.name}
+                                                          </h2>
+                                                          <p className="footer">
+                                                              {element.type}
+                                                          </p>
+                                                      </div>
+                                                  </div>
+                                                  <p className="desc">
+                                                      {element.about}
+                                                  </p>
+                                              </div>
+                                          );
+                                      })
+                                    : ""}
                             </>
                         ) : (
                             " "
